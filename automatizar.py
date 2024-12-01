@@ -96,7 +96,7 @@ def generate_audio_with_retries(text, api_key, voice_id, stability, similarity, 
                     'filename': filename,
                     'text': text
                 })
-                time.sleep(0.5)  # Pequeña pausa entre intentos
+                time.sleep(10.5)  # Pequeña pausa entre intentos
             else:
                 st.warning(f"Error en intento {attempt + 1}: {response.status_code}")
         except Exception as e:
